@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 2021_05_31_150853) do
     t.string "name"
   end
 
-  create_table "records", force: :cascade do |t|
-    t.integer "record"
+  create_table "results", force: :cascade do |t|
     t.integer "game_id"
     t.integer "user_id"
+    t.string "result"
   end
 
   create_table "users", force: :cascade do |t|

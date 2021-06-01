@@ -5,7 +5,7 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/Users/) 
-      return [200, { 'Content-Type' => 'application/json' }, [ {:message => "blahblah"}.to_json ]]
+      return [200, { 'Content-Type' => 'application/json' }, [ {:users => User.all}.to_json ]]
 
     else
       resp.write "Path Not Found"

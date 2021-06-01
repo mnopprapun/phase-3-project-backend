@@ -1,8 +1,13 @@
 
-game1 = Games.create(name: 'tictactoe')
+game1 = Game.create(name: 'tictactoe')
 
 
-jack = Users.create(name: 'jack')
+jack = User.create(name: 'jack')
 
-bob = Users.create(name: 'bob')
+bob = User.create(name: 'bob')
 
+phill = User.create(name: 'phill')
+
+result1 = Result.create(game: game1 , user: jack , result: "Win")
+result2 = Result.create(game: game1 , user: bob , result: "Loss")
+result3 = Result.create(game: game1 , user: phill , result: "Tie")
