@@ -10,7 +10,7 @@ class Application
     else
       resp.write "Path Not Found"
 
-      if req.path.match(/Scores/) 
+      if req.path.match(/Records/) 
         return [200, { 'Content-Type' => 'application/json' }, [ {:message => "blahblah"}.to_json ]]
   
       else
@@ -18,7 +18,7 @@ class Application
 
       end
 
-      if req.path.match(/Hi-Score-Board/) 
+      if req.path.match(/Games/) 
         return [200, { 'Content-Type' => 'application/json' }, [ {:message => "blahblah"}.to_json ]]
   
       else

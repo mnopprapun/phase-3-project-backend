@@ -13,13 +13,13 @@
 ActiveRecord::Schema.define(version: 2021_05_31_150853) do
 
   create_table "games", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "score_id"
+    t.string "name"
   end
 
-  create_table "scores", force: :cascade do |t|
-    t.integer "score"
+  create_table "records", force: :cascade do |t|
+    t.integer "record"
     t.integer "game_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
